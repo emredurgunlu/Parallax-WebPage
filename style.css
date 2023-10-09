@@ -3,150 +3,105 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html,
+body {
+  /* "height: 100%" is for the parallax effect */
+  height: 100%;
+  font-size: 1rem;
   font-family: "Lato", sans-serif;
-}
-
-.background1 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(images/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.baslik {
-  background-color: rgb(76, 76, 76);
-  color: white;
-  letter-spacing: 0.5rem;
-  font-size: 3rem;
-  width: 30rem;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  padding: 1.5rem;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  outline: 10px inset #a366a5;
-  outline-offset: 1rem;
-}
-
-.paragraf {
-  text-align: center;
-  padding: 2rem;
-  background-color: rgb(241, 241, 241);
   color: #666666;
 }
+.background--image1 {
+  background-image: url(./images/bg1.jpg);
+  height: 100%;
+}
+.background--image2 {
+  background-image: url(./images/bg2.jpg);
+  height: 80%;
+}
+.background--image3 {
+  background-image: url(./images/bg3.jpg);
+  height: 80%;
+}
+.background--image4 {
+  background-image: url(./images/bg4.jpg);
+  height: 80%;
+}
+.background--image1,
+.background--image2,
+.background--image3,
+.background--image4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.paragraf h2 {
-  margin: 2rem;
+  /* "background-attachment: fixed" is for the parallax effect */
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0.7;
 }
 
-.paragraf p {
-  line-height: 2rem;
+.heading-container {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.heading-container__heading {
+  background-color: black;
+  color: white;
   padding: 2rem;
-  margin: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  outline: 0.5rem inset purple;
+  outline-offset: 1rem;
+}
+.heading-container__text {
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 0.7rem 0;
+  outline: 0.4rem inset purple;
+  outline-offset: 0.2rem;
+  text-transform: capitalize;
+  line-height: 1.5rem;
 }
 
-.background2 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(images/bg2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
+.section {
+  text-align: center;
+  padding: 3rem 5rem;
+  line-height: 1.8rem;
 }
-
-.background2 img {
-  width: 30rem;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.6;
+.section-light {
+  background-color: #f1f1f1;
 }
-
-.aws {
+.section-dark {
   background-color: #282e34;
-  color: #dddddd;
+  color: #ddd;
+}
+.heading-container__logo {
+  width: 30%;
 }
 
-.background3 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(images/bg3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.background3 h1 {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 47rem;
-  padding: 0.5rem 0rem;
-  outline: 7px inset #a366a5;
-  outline-offset: 0.3rem;
-}
-
-.background4 {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(images/bg4.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.background4 p {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30rem;
-  padding: 0.5rem 0rem;
-  outline: 7px inset #a366a5;
-  outline-offset: 0.3rem;
-}
-
-.why_cw {
-  background-color: #282e34;
-  color: #dddddd;
-}
-
-.background_last {
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(images/bg1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.background_last h1 {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 47rem;
-  padding: 0.5rem 0rem;
+@media (max-width: 768px) {
+  .heading-container {
+    font-size: 1.5rem;
+  }
+  .heading-container__heading {
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  .section {
+    padding: 1.5rem 3rem;
+  }
+  .heading-container__logo {
+    width: 50%;
+  }
 }
